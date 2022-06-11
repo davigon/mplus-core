@@ -20,6 +20,12 @@
             <version>1.18.24</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>com.microsoft.playwright</groupId>
+            <artifactId>playwright</artifactId>
+            <version>1.22.0</version>
+        </dependency>
     </dependencies>
 
 </project>
