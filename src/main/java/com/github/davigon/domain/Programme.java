@@ -8,7 +8,7 @@ import java.time.OffsetDateTime;
 public class Programme {
     private final OffsetDateTime start;
 
-    private final OffsetDateTime stop;
+    private OffsetDateTime stop;
 
     private final String channel;
 
@@ -25,5 +25,9 @@ public class Programme {
         this.title = title;
         this.description = description;
         this.category = category;
+    }
+
+    public void setStop(OffsetDateTime stop) {
+        this.stop = stop;
     }
 }
