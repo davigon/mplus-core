@@ -11,8 +11,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ProgrammeProvider {
+    private final static Logger LOGGER = Logger.getLogger("com.github.davigon.providers.ProgrammeProvider");
+
     private static final String SOURCE_URL = "https://comunicacion.movistarplus.es/programacion/";
     private static final XmlMapper XML_MAPPER = new XmlMapper();
 
@@ -29,7 +33,7 @@ public class ProgrammeProvider {
 
             return getProgrammes(page, from, days);
         } catch (TimeoutError | IOException te) {
-            System.out.println("\tReintentando descarga...");
+            LOGGER.log(Level.WARNING, "Descarga fallida. Reintentando descarga...");
             return get(from, days);
         }
     }
