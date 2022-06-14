@@ -15,7 +15,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class ProgrammeProvider {
-    private final static Logger LOGGER = Logger.getLogger("com.github.davigon.providers.ProgrammeProvider");
+    private final static Logger LOGGER = Logger.getLogger(ProgrammeProvider.class.getName());
 
     private static final String SOURCE_URL = "https://comunicacion.movistarplus.es/programacion/";
     private static final XmlMapper XML_MAPPER = new XmlMapper();
